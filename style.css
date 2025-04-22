@@ -1,0 +1,809 @@
+@import url('https://fonts.googleapis.com/css2?family=National+Park:wght@200..800&display=swap');
+body {
+    font-family: 'National Park', sans-serif;
+  }
+  h1, h2 {
+    font-weight: 700; /* bold headings */
+  }
+  
+  p, li, a {
+    font-weight: 400; /* normal body */
+  }
+    
+/**********************************hero section*******************************/
+.hero {
+    background-color: #ffffff; /* Pure white background */
+    padding-top: 120px;
+    padding-bottom: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 80vh;
+    border-bottom-left-radius: 40px; /* Rounded bottom-left corner */
+}
+  
+  nav {
+    position: fixed; /* Make the navigation fixed */
+    top: 0; /* Stick it to the top of the viewport */
+    left: 0;
+    width: 97%; /* Make it span the entire width */
+    background-color: white; /* Initially transparent background */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; /* Adjust vertical padding as needed */
+    z-index: 100; /* Ensure it stays on top of other content */
+  }
+  
+  .logo {
+    height: 50px;
+    width: 60px; /* Adjust as needed */
+    width: auto;
+    object-fit: contain;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 30px;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-left: 30px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #555; /* Adjust color for better visibility on transparent background if needed */
+    font-weight: 500;
+  }
+  
+  .hero-content {
+    text-align: left;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 140px; 
+  }
+  
+  .hero-content h1 {
+    font-size: 3em;
+    font-weight: bold;
+    color: #222;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 1em;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  .social-links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .social-links p {
+    font-size: 0.8em;
+    color: #777;
+    margin-right: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .social-links a {
+    display: inline-block;
+    margin-right: 15px;
+    text-decoration: none;
+  }
+  
+  .social-links img {
+    width: 35px;
+    height: 35px;
+    display: block;
+  }
+  
+  /* Basic responsiveness */
+  @media (max-width: 768px) {
+    nav {
+      padding: 15px 20px; /* Adjust padding for smaller screens */
+    }
+    nav ul {
+      display: none; /* Keep it hidden for now, will likely add a mobile menu later */
+    }
+    .hero {
+      padding-top: 100px; /* Adjust top padding for smaller screens */
+      padding-bottom: 50px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .hero-content {
+      text-align: center;
+      padding: 50px 20px;
+    }
+    .hero-content h1 {
+      font-size: 2.5em;
+    }
+  }
+
+  @media (max-width: 768px) {
+    nav {
+      position: relative; /* Needed for absolute positioning of the mobile menu button */
+    }
+  
+    .nav-links {
+      position: fixed; /* Slide in from the side */
+      top: 0;
+      right: -300px; /* Start off-screen */
+      width: 300px;
+      height: 100%;
+      background-color: #f0f0f0; /* Or any background color */
+      z-index: 1010; /* Above modal and other content */
+      padding-top: 60px; /* Space for the close button */
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: right 0.3s ease-in-out;
+    }
+  
+    .nav-links.open {
+      right: 0; /* Slide into view */
+    }
+  
+    .nav-links li {
+      padding: 15px 20px;
+      width: 100%;
+    }
+  
+    .nav-links li a {
+      display: block;
+      color: #333; /* Adjust link color */
+      text-decoration: none;
+    }
+  
+    .mobile-menu-button {
+      display: block; /* Show on mobile */
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      z-index: 1020; /* Above the nav links */
+    }
+  
+    .mobile-menu-button svg {
+      width: 24px;
+      height: 24px;
+    }
+  
+    .close-menu-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+    }
+  
+    .close-menu-button svg {
+      width: 24px;
+      height: 24px;
+    }
+  
+    .nav-links li:last-child { /* Hide the close button in the default state */
+      display: none;
+    }
+  
+    .nav-links.open li:last-child { /* Show the close button when the menu is open */
+      display: block;
+    }
+  }
+  
+  /* Hide the default nav links on mobile */
+  @media (max-width: 768px) {
+    nav ul {
+      display: none !important;
+    }
+  }
+  
+  /* Show the default nav links on desktop */
+  @media (min-width: 769px) {
+    .mobile-menu-button {
+      display: none; /* Hide on desktop */
+    }
+    .close-menu-button {
+      display: none; /* Hide on desktop */
+    }
+    .nav-links {
+      /* Restore desktop nav link styles here if needed */
+      position: static !important;
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      width: auto !important;
+      height: auto !important;
+      background-color: transparent !important;
+      padding-top: 0 !important;
+      transition: none !important;
+    }
+    .nav-links li {
+      padding: 0 15px !important;
+    }
+  }
+  
+  .body-scroll-lock {
+    overflow: hidden;
+  }
+  
+/**********************************project section*******************************/
+ .projects-section {
+    padding: 60px 20px;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    gap: 40px; /* Gap between cards */
+  }
+
+ .project-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+    border: 1.5px solid #d6e0ff;
+    width: 90%;
+    max-width: 100%;
+    min-height: 500px; /* Makes it taller */
+  }
+  
+  
+  .project-image {
+    flex: 1;
+    background-color: #ffe99f; /* Temporary background fill to simulate image padding */
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    margin-left: 20px;
+    height: 420px;
+  }
+  
+  .project-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .project-card.reverse {
+    flex-direction: row-reverse;
+  }
+
+  .project-details {
+    flex: 1;
+    padding: 30px;
+    justify-content: space-between; /* Makes button go low, h3 stay high */
+    height: 100%; 
+  }
+  
+  .project-details h1 {
+    font-size: 1.7em;
+    font-weight: 800;
+    color: #1c1c1c;
+    margin: 0 0 10px 0;
+    margin-top: 0;
+  }
+  
+  .project-details .project-button {
+    align-self: flex-start; /* Optional: makes the button align to the left */
+  }
+  
+  .project-details .project-info {
+    color: #888;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+  }
+  
+  .project-details .project-description {
+    color: #444;
+    font-size: 0.95em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .project-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+  }
+  
+  .project-tags li {
+    background-color: #e8e8ff;
+    color: #5a5a89;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75em;
+    font-weight: 500;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .project-button {
+    background-color: #306bff;
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-family: 'National Park', sans-serif;
+    font-weight: bold;
+    font-size: 0.9em;
+    box-shadow: 0 4px 12px rgba(48, 107, 255, 0.3);
+    transition: background-color 0.3s ease;
+  }
+  
+  .project-detail-content {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    max-width: 900px;
+    width: 90%;
+    max-height: 90%;
+    overflow-y: auto;
+    padding: 30px;
+    position: relative; /* For close button positioning */
+  }
+
+   .close-modal-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .project-button:hover {
+    background-color: #2554cc;
+  }
+  .project-detail-modal {
+    position: fixed; /* This is crucial for the modal to appear as an overlay */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Make sure it's on top of other content */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s;
+  }
+  .project-detail-modal.open {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease-in-out, visibility 0s linear 0s;
+  }
+  
+  .project-meta .project-title {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .project-meta .project-category {
+    font-size: 0.9em;
+    color: #777;
+  }
+  
+  .close-modal-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .close-modal-button svg {
+    width: 24px;
+    height: 24px;
+    fill: #555;
+    transition: fill 0.3s ease;
+  }
+  
+  .close-modal-button:hover svg {
+    fill: #333;
+  }
+  
+  .project-detail-image {
+    margin-bottom: 20px;
+  }
+  
+  .project-detail-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .project-detail-info {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .project-description {
+    flex: 2; /* Takes up more space for the text */
+    line-height: 1.6;
+    color: #444;
+  }
+  
+  .project-sidebar {
+    flex: 1;
+  }
+  
+  .project-tags {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Allow tags to wrap to the next line */
+  }
+  
+  .project-tags li {
+    background-color: #e0e0e0;
+    color: #555;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8em;
+  }
+  
+  .project-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .project-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+  }
+  
+  .project-links a:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .project-links a svg {
+    width: 18px;
+    height: 18px;
+    fill: #555;
+  }
+  
+  /* Basic responsiveness */
+  @media (max-width: 768px) {
+    .project-detail-content {
+      padding: 20px;
+      width: 95%;
+    }
+  
+    .project-detail-info {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .project-sidebar {
+      order: -1; /* Move sidebar above description on smaller screens */
+    }
+  
+    .project-tags {
+      gap: 8px;
+    }
+  
+    .project-links {
+      gap: 8px;
+    }
+  }
+  @media (max-width: 768px) {
+    .projects-section {
+      padding: 40px 15px; /* Adjust padding for smaller screens */
+      border-bottom-right-radius: 0; /* Remove rounded corners on mobile */
+      border-bottom-left-radius: 0; /* Remove rounded corners on mobile */
+      gap: 20px; /* Adjust gap between cards */
+    }
+  
+    .project-card {
+      flex-direction: column; /* Stack items vertically */
+      align-items: stretch; /* Make details take full width */
+      width: 100%; /* Take full width of the container */
+      min-height: auto; /* Adjust min-height for stacking */
+      border-radius: 10px; /* Slightly smaller border radius */
+    }
+  
+    .project-card.reverse {
+      flex-direction: column; /* Ensure reverse cards also stack */
+    }
+  
+    .project-image {
+      width: 100%; /* Image takes full width */
+      height: auto; /* Maintain aspect ratio */
+      border-bottom-left-radius: 0; /* Remove rounded corners where it meets details */
+      border-bottom-right-radius: 0; /* Remove rounded corners where it meets details */
+    }
+  
+    .project-details {
+      padding: 20px; /* Add some padding inside the details */
+    }
+  
+    .project-tags {
+      justify-content: flex-start; /* Align tags to the left */
+    }
+  }
+  
+/**********************************about section*******************************/
+
+.about-section {
+    padding: 60px 20px;
+    background-color: #fff; /* Or your preferred background */
+    display: flex;
+    gap: 40px; /* Space between the info and skills sections */
+    max-width:100%px; /* Optional max width for the section */
+    margin: 0 auto; /* Center the section */
+    align-items: flex-start; /* Align items to the top */
+  }
+  
+  .about-info {
+    flex: 1; /* Takes up available space */
+  }
+  
+  .about-info h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .about-info p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  .about-social-links {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .about-social-links p {
+    font-size: 0.8em;
+    color: #777;
+    margin-right: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .about-social-links a {
+    display: inline-block;
+    margin-right: 15px;
+  }
+  
+  .about-social-links img {
+    width: 30px;
+    height: 30px;
+    display: block;
+  }
+  
+  .resume-button {
+    display: inline-block;
+    background-color: #007bff; /* Example button color */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+  }
+  
+  .resume-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .about-skills {
+    flex: 1; /* Takes up available space */
+  }
+  
+  .skill-category {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee; /* Separator between categories */
+    padding-bottom: 20px;
+  }
+  
+  .skill-category:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  
+  .skill-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer; /* Indicate it's clickable */
+  }
+  
+  .skill-header h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 0;
+  }
+  
+  .dropdown-toggle {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .dropdown-toggle svg {
+    width: 20px;
+    height: 20px;
+    fill: #777;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .dropdown-toggle.open svg {
+    transform: rotate(180deg); /* Rotate the arrow when open */
+  }
+  
+  .skill-content {
+    display: none; /* Initially hidden */
+    padding-top: 15px;
+  }
+  
+  .skill-content.open {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Responsive grid */
+    gap: 15px;
+  }
+  
+  .skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #555;
+  }
+  
+  .skill-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+  }
+  
+  .skill-item span {
+    font-size: 0.9em;
+  }
+  
+  /* Responsive layout */
+  @media (max-width: 768px) {
+    .about-section {
+      flex-direction: column;
+      gap: 30px;
+    }
+  
+    .about-skills {
+      width: 100%;
+    }
+  }
+
+ /**********************************contact section*******************************/
+ .contact-section {
+    background-color: #645bff; /* Example background color - adjust to your design */
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+    max-width: 100%;
+    border-top-left-radius: 90px;
+  }
+  
+  .contact-content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .contact-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .contact-content p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-group {
+    position: relative; /* For potential label animation or styling */
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+    background-color: #fff;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+  }
+  
+  .form-group textarea {
+    min-height: 150px;
+  }
+  
+  .submit-button {
+    background-color: #fff;
+    color: #645bff; /* Example button text color */
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Basic responsiveness */
+  @media (max-width: 768px) {
+    .contact-content h2 {
+      font-size: 2em;
+    }
+  
+    .contact-content p {
+      font-size: 0.9em;
+    }
+  
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group textarea,
+    .submit-button {
+      font-size: 0.95em;
+      padding: 12px;
+    }
+  
+    .form-group textarea {
+      min-height: 120px;
+    }
+  } 

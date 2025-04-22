@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <div class="hero">
+    <nav>
+        <img src="/images/logo.png" alt="yafet-logo" class="logo">
+        <button class="mobile-menu-button">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M3 6.001H21V8.001H3V6.001ZM3 11.001H21V13.001H3V11.001ZM3 16.001H21V18.001H3V16.001Z"/>
+          </svg>
+        </button>
+        <ul class="nav-links">
+          <li><a href="projects-section">Portfolio</a></li>
+          <li><a href="about-section">About</a></li>
+          <li><a href="contact-section">Contact</a></li>
+          <li>
+            <button class="close-menu-button">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    <div class="hero-content">
+      <h1>I'm Yafet<br>Glad to see you!</h1>
+      <p>I'm a software developer! I can help you build a product, feature or website. Look through some of my work and experience! If you like what you see and have a project you need coded, don't hesitate to contact me.</p>
+      <div class="social-links">
+        <p>LET'S CONNECT</p>
+        <a href="#" target="_blank"><img src="/images/twitter.png" alt="Twitter"></a>
+        <a href="https://www.linkedin.com/in/yafet-aklilu-559a3432b/" target="_blank"><img src="/images/linkedin.png" alt="LinkedIn"></a>
+        <a href="https://github.com/yafetaklilu" target="_blank"><img src="/images/github.png" alt="GitHub"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="projects-section">
+    <div class="project-card" data-modal-id="modal-ewallet">
+      <div class="project-image" style="background-color: rgb(246, 206, 254);">
+        <img src="/images/web.png" alt="E-Wallet Project">
+      </div>
+      <div class="project-details">
+        <h1>E-Wallet</h1>
+        <p class="project-info">E-wallet • Full Stack Dev • 2025</p>
+        <p class="project-description">E-Wallet is a fast, secure, and easy way to manage your money digitally. Send, receive, and track payments—all in one place, anytime, anywhere.</p>
+        <ul class="project-tags">
+          <li>html</li>
+          <li>ruby on rails</li>
+          <li>css</li>
+          <li>javascript</li>
+        </ul>
+        <a href="#" class="project-button">See project</a>
+      </div>
+    </div>
+
+    <div class="project-card reverse" data-modal-id="modal-green-business">
+      <div class="project-image" style="background-color: rgb(227, 250, 173);">
+        <img src="/images/web1.png" alt="Green Business Project">
+      </div>
+      <div class="project-details">
+        <h1>Green Business</h1>
+        <p class="project-info">Green • Lead Developer • 2023</p>
+        <p class="project-description">Green Business helps companies adopt eco-friendly practices with smart, sustainable solutions. Build a better future—one green step at a time.</p>
+        <ul class="project-tags">
+          <li>swift</li>
+          <li>ruby on rails</li>
+          <li>css</li>
+          <li>javascript</li>
+        </ul>
+        <a href="#" class="project-button">See project</a>
+      </div>
+    </div>
+
+    <div class="project-card" data-modal-id="modal-marcom">
+      <div class="project-image"  style="background-color: rgb(203, 253, 236);">
+        <img src="/images/web2.png" alt="Marcom Agency Project">
+      </div>
+      <div class="project-details">
+        <h1>Marcom Agency</h1>
+        <p class="project-info">Marcom • Full Stack Dev • 2024</p>
+        <p class="project-description">Marcom Agency creates smart, effective marketing and communication strategies that help brands connect, grow, and thrive.</p>
+        <ul class="project-tags">
+          <li>html</li>
+          <li>ruby on rails</li>
+          <li>css</li>
+          <li>javascript</li>
+        </ul>
+        <a href="#" class="project-button">See project</a>
+      </div>
+    </div>
+
+    <div class="project-card reverse" data-modal-id="modal-mnmlst">
+      <div class="project-image">
+        <img src="/images/web3.png" alt="Mnmlst Clothing Brand Project">
+      </div>
+      <div class="project-details">
+        <h1>Mnmlst Clothing Brand</h1>
+        <p class="project-info">Mnmlst • Lead Developer • 2023</p>
+        <p class="project-description">Mnmlst Clothing is a minimalist fashion brand. I built the website to match the brand’s clean, modern style, with a focus on user-friendly design and smooth e-commerce functionality.</p>
+        <ul class="project-tags">
+          <li>swift</li>
+          <li>ruby on rails</li>
+          <li>css</li>
+          <li>javascript</li>
+        </ul>
+        <a href="#" class="project-button">See project</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-detail-modal modal-ewallet">
+    <div class="project-detail-content">
+      <div class="project-detail-header">
+        <div class="project-meta">
+          <h2 class="project-title">E-Wallet</h2>
+          <p class="project-category">E-wallet • Full Stack Dev • 2025</p>
+        </div>
+        <button class="close-modal-button">
+          <svg viewBox="0 0 24 24"><path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </div>
+      <div class="project-detail-image">
+        <img src="/images/web.png" alt="E-Wallet Project">
+      </div>
+      <div class="project-detail-info">
+        <div class="project-description">
+          <p>E-Wallet is a secure and convenient digital wallet solution designed to simplify the way you manage your money. Whether you're paying bills, sending money to friends and family, or shopping online, E-Wallet makes it fast, safe, and easy.</p>
+          <p>With features like instant transfers, transaction history, and multi-layer security, E-Wallet brings financial freedom right to your fingertips. Say goodbye to cash and long queues—manage everything from your phone or desktop, anytime, anywhere.</p>
+        </div>
+        <div class="project-sidebar">
+          <ul class="project-tags">
+            <li>html</li>
+            <li>ruby on rails</li>
+            <li>css</li>
+            <li>javascript</li>
+          </ul>
+          <div class="project-links">
+            <a href="#" target="_blank" class="live-link">See live</a>
+            <a href="#" target="_blank" class="source-link">See source</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-detail-modal modal-green-business">
+    <div class="project-detail-content">
+      <div class="project-detail-header">
+        <div class="project-meta">
+          <h2 class="project-title">Green Business</h2>
+          <p class="project-category">Green • Lead Developer • 2023</p>
+        </div>
+        <button class="close-modal-button">
+          <svg viewBox="0 0 24 24"><path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </div>
+      <div class="project-detail-image">
+        <img src="/images/web1.png" alt="Green Business Project">
+      </div>
+      <div class="project-detail-info">
+        <div class="project-description">
+          <p>Green Business is a platform dedicated to promoting sustainable and eco-friendly practices in the world of commerce. We help businesses reduce their environmental impact through smart solutions, resources, and community support.</p>
+          <p>Whether you're just starting your sustainability journey or looking to take your green initiatives to the next level, Green Business connects you with tools, ideas, and partners that make it easy to go green—and stay green.</p>
+        </div>
+        <div class="project-sidebar">
+          <ul class="project-tags">
+            <li>swift</li>
+            <li>ruby on rails</li>
+            <li>css</li>
+            <li>javascript</li>
+          </ul>
+          <div class="project-links">
+            <a href="#" target="_blank" class="live-link">See live</a>
+            <a href="#" target="_blank" class="source-link">See source</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="project-detail-modal modal-marcom">
+    <div class="project-detail-content">
+      <div class="project-detail-header">
+        <div class="project-meta">
+          <h2 class="project-title">Marcom Agency</h2>
+          <p class="project-category">Marcom • Full Stack Dev • 2024</p>
+        </div>
+        <button class="close-modal-button">
+          <svg viewBox="0 0 24 24"><path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </div>
+      <div class="project-detail-image">
+        <img src="/images/web2.png" alt="Marcom Agency Project">
+      </div>
+      <div class="project-detail-info">
+        <div class="project-description">
+          <p>Marcom Agency is your creative partner in marketing and communications. We specialize in crafting impactful strategies, campaigns, and content that connect brands with their audience.</p>
+          <p>From digital marketing and branding to PR and social media, Marcom delivers tailored solutions that drive results and make your message stand out in a crowded world.</p>
+        </div>
+        <div class="project-sidebar">
+          <ul class="project-tags">
+            <li>HTML</li><li>Ruby on Rails</li><li>CSS</li><li>JavaScript</li>
+          </ul>
+          <div class="project-links">
+            <a href="#" target="_blank" class="live-link">See live</a>
+            <a href="#" target="_blank" class="source-link">See source</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="project-detail-modal modal-mnmlst">
+    <div class="project-detail-content">
+      <div class="project-detail-header">
+        <div class="project-meta">
+          <h2 class="project-title">Mnmlst Clothing Brand</h2>
+          <p class="project-category">Mnmlst • Lead Developer • 2023</p>
+        </div>
+        <button class="close-modal-button">
+          <svg viewBox="0 0 24 24"><path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </div>
+      <div class="project-detail-image">
+        <img src="/images/web3.png" alt="Mnmlst Clothing Brand Project">
+      </div>
+      <div class="project-detail-info">
+        <div class="project-description">
+          <p>Mnmlst Clothing is a modern fashion brand that focuses on clean design, timeless style, and sustainable materials. The website was built to reflect the brand’s minimalist identity, with a clean layout, intuitive user experience, and a smooth shopping flow from product browsing to checkout.</p>
+          <p>It features a responsive design, product filtering, and a fully integrated e-commerce system—all optimized for both aesthetics and performance.  </p>
+        </div>
+        <div class="project-sidebar">
+          <ul class="project-tags">
+            <li>Swift</li><li>Ruby on Rails</li><li>CSS</li><li>JavaScript</li>
+          </ul>
+          <div class="project-links">
+            <a href="#" target="_blank" class="live-link">See live</a>
+            <a href="#" target="_blank" class="source-link">See source</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="about-section">
+    <div class="about-info">
+      <h2>About Myself</h2>
+      <p>Hello I'm a software developer! I can help you build a product, feature or website. Look through some of my work and experience! If you like what you see and have a project you need coded, don't hesitate to contact me.</p>
+      <div class="about-social-links">
+        <p>LET'S CONNECT</p>
+        <a href="#" target="_blank"><img src="/images/twitter.png" alt="Twitter"></a>
+        <a href="https://www.linkedin.com/in/yafet-aklilu-559a3432b/" target="_blank"><img src="/images/linkedin.png" alt="LinkedIn"></a>
+        <a href="https://github.com/yafetaklilu" target="_blank"><img src="/images/github.png" alt="GitHub"></a>
+      </div>
+      <a href="#" class="resume-button">Get my resume</a>
+    </div>
+
+    <div class="about-skills">
+      <div class="skill-category">
+        <div class="skill-header">
+          <h3>Languages</h3>
+          <button class="dropdown-toggle" data-target="languages-content">
+            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M7 10l5 5 5-5z"/></svg>
+          </button>
+        </div>
+        <div class="skill-content" id="languages-content">
+          <div class="skill-item">
+            <img src="/images/js.webp" alt="JavaScript">
+            <span>JavaScript</span>
+          </div>
+          <div class="skill-item">
+            <img src="/images/1175208.webp" alt="HTML">
+            <span>HTML</span>
+          </div>
+          <div class="skill-item">
+            <img src="/images/css.webp" alt="CSS">
+            <span>CSS</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <div class="skill-header">
+          <h3>Frameworks</h3>
+          <button class="dropdown-toggle" data-target="frameworks-content">
+            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M7 10l5 5 5-5z"/></svg>
+          </button>
+        </div>
+        <div class="skill-content" id="frameworks-content">
+          <div class="skill-content" id="languages-content">
+            <div class="skill-item">
+              <img src="/images/js.webp" alt="JavaScript">
+              <span>JavaScript</span>
+            </div>
+            <div class="skill-item">
+              <img src="/images/1175208.webp" alt="HTML">
+              <span>HTML</span>
+            </div>
+            <div class="skill-item">
+              <img src="/images/css.webp" alt="CSS">
+              <span>CSS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <div class="skill-header">
+          <h3>Skills</h3>
+          <button class="dropdown-toggle" data-target="skills-content">
+            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M7 10l5 5 5-5z"/></svg>
+          </button>
+        </div>
+        <div class="skill-content" id="skills-content">
+          <div class="skill-content" id="languages-content">
+            <div class="skill-item">
+              <img src="/images/js.webp" alt="JavaScript">
+                                  <span>JavaScript</span>
+                                </div>
+                                <div class="skill-item">
+                                  <img src="/images/1175208.webp" alt="HTML">
+                                  <span>HTML</span>
+                                </div>
+                                <div class="skill-item">
+                                  <img src="/images/css.webp" alt="CSS">
+                                  <span>CSS</span>
+                                </div>
+                                </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="contact-section">
+                    <div class="contact-content">
+                      <h2>Contact me</h2>
+                      <p>If you have an application you are interested in developing, a feature that you need built, or a project that needs coding, I'd love to help with it!</p>
+                      <form class="contact-form">
+                        <div class="form-group">
+                          <input type="text" id="name" name="name" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                          <input type="email" id="email" name="email" placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                          <textarea id="message" name="message" placeholder="Write your message here..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Get in touch</button>
+                      </form>
+                    </div>
+                  </div>      
+
+                  <script src="script.js" defer></script>
+    </body>
+</html>
