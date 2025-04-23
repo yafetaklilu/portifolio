@@ -741,8 +741,7 @@ body {
     border-top-left-radius: 90px;
     background-image: url('images/contact bg.jpg'); 
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+   
   }
   
   .contact-content {
