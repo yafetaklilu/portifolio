@@ -680,15 +680,22 @@ body {
   }
   
   .skill-content {
-    display: none; /* Initially hidden */
-    padding-top: 15px;
-  }
-  
-  .skill-content.open {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Responsive grid */
-    gap: 15px;
-  }
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.skill-content.open {
+  max-height: 500px; /* adjust as needed */
+}
+
+.arrow-icon {
+  transition: transform 0.3s ease;
+}
+
+.arrow-icon.rotated {
+  transform: rotate(180deg);
+}
   
   .skill-item {
     display: flex;
