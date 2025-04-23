@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=National+Park:wght@200..800&display=swap');
+html {
+  scroll-behavior: smooth;
+}
 body {
     font-family: 'National Park', sans-serif;
   }
