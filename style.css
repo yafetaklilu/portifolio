@@ -733,8 +733,7 @@ body {
   }
 
  /**********************************contact section*******************************/
- .contact-section {
-    background-color: #645bff; /* Example background color - adjust to your design */
+ .contact-section { /* Example background color - adjust to your design */
     color: #fff;
     padding: 80px 20px;
     text-align: center;
