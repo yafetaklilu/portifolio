@@ -40,6 +40,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+document.querySelectorAll('.dropdown-toggle').forEach(button => {
+  button.addEventListener('click', () => {
+    const targetId = button.getAttribute('data-target');
+    const content = document.getElementById(targetId);
+    const arrow = button.querySelector('.arrow-icon');
+
+    content.classList.toggle('open');
+    arrow.classList.toggle('rotated');
+  });
+});
 
 
   
