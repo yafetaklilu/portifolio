@@ -683,6 +683,7 @@ body {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
+    display: flex;
 }
 
 .skill-content.open {
