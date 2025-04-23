@@ -207,9 +207,6 @@ body {
       display: block;
     }
   }
-.yeab{
-  height:100px;
-}
   
   /* Hide the default nav links on mobile */
   @media (max-width: 768px) {
