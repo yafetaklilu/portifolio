@@ -250,79 +250,81 @@
     </div>
   </div>
 
-  <div class="about-section" id="about-section">
-    <div class="about-info">
-      <h2>About Myself</h2>
-      <p>Hello I'm a software developer! I can help you build a product, feature or website. Look through some of my work and experience! If you like what you see and have a project you need coded, don't hesitate to contact me.</p>
-      <div class="about-social-links">
-        <p>LET'S CONNECT</p>
-        <a href="#" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
-        <a href="https://www.linkedin.com/in/yafet-aklilu-559a3432b/" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
-        <a href="https://github.com/yafetaklilu" target="_blank"><img src="images/github.png" alt="GitHub"></a>
+<div class="about-section" id="about-section">
+  <div class="about-info">
+    <h2>About Myself</h2>
+    <p>Hello I'm a software developer! I can help you build a product, feature or website. Look through some of my work and experience! If you like what you see and have a project you need coded, don't hesitate to contact me.</p>
+    <div class="about-social-links">
+      <p>LET'S CONNECT</p>
+      <a href="#" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
+      <a href="https://www.linkedin.com/in/yafet-aklilu-559a3432b/" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
+      <a href="https://github.com/yafetaklilu" target="_blank"><img src="images/github.png" alt="GitHub"></a>
+    </div>
+    <a href="#" class="resume-button">Get my resume</a>
+  </div>
+
+  <div class="about-skills">
+    <div class="skill-category">
+      <div class="skill-header">
+        <h3>Languages</h3>
+        <button class="dropdown-toggle" data-target="languages-content">
+          <svg class="arrow-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M7 10l5 5 5-5z"/></svg>
+        </button>
       </div>
-      <a href="#" class="resume-button">Get my resume</a>
+      <div class="skill-content" id="languages-content">
+        <div class="skill-item"><img src="images/js.webp" alt="JavaScript"><span>JavaScript</span></div>
+        <div class="skill-item"><img src="images/1175208.webp" alt="HTML"><span>HTML</span></div>
+        <div class="skill-item"><img src="images/css.webp" alt="CSS"><span>CSS</span></div>
+      </div>
     </div>
 
-    <div class="about-skills">
-  <div class="skill-category">
-    <div class="skill-header">
-      <h3>Languages</h3>
-      <button class="dropdown-toggle" data-target="languages-content">
-        <svg class="arrow-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M7 10l5 5 5-5z"/></svg>
-      </button>
+    <div class="skill-category">
+      <div class="skill-header">
+        <h3>Frameworks</h3>
+        <button class="dropdown-toggle" data-target="frameworks-content">
+          <svg class="arrow-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M7 10l5 5 5-5z"/></svg>
+        </button>
+      </div>
+      <div class="skill-content" id="frameworks-content">
+        <div class="skill-item"><img src="images/vue.webp" alt="Vue"><span>Vue</span></div>
+        <div class="skill-item"><img src="images/react.webp" alt="React"><span>React</span></div>
+      </div>
     </div>
-    <div class="skill-content" id="languages-content">
-      <div class="skill-item"><img src="images/js.webp" alt="JavaScript"><span>JavaScript</span></div>
-      <div class="skill-item"><img src="images/1175208.webp" alt="HTML"><span>HTML</span></div>
-      <div class="skill-item"><img src="images/css.webp" alt="CSS"><span>CSS</span></div>
+
+    <div class="skill-category">
+      <div class="skill-header">
+        <h3>Skills</h3>
+        <button class="dropdown-toggle" data-target="skills-content">
+          <svg class="arrow-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M7 10l5 5 5-5z"/></svg>
+        </button>
+      </div>
+      <div class="skill-content" id="skills-content">
+        <div class="skill-item"><img src="images/git.webp" alt="Git"><span>Git</span></div>
+        <div class="skill-item"><img src="images/figma.webp" alt="Figma"><span>Figma</span></div>
+      </div>
     </div>
   </div>
+</div> 
 
-  <div class="skill-category">
-    <div class="skill-header">
-      <h3>Frameworks</h3>
-      <button class="dropdown-toggle" data-target="frameworks-content">
-        <svg class="arrow-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M7 10l5 5 5-5z"/></svg>
-      </button>
-    </div>
-    <div class="skill-content" id="frameworks-content">
-      <div class="skill-item"><img src="images/vue.webp" alt="Vue"><span>Vue</span></div>
-      <div class="skill-item"><img src="images/react.webp" alt="React"><span>React</span></div>
-    </div>
-  </div>
-
-  <div class="skill-category">
-    <div class="skill-header">
-      <h3>Skills</h3>
-      <button class="dropdown-toggle" data-target="skills-content">
-        <svg class="arrow-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M7 10l5 5 5-5z"/></svg>
-      </button>
-    </div>
-    <div class="skill-content" id="skills-content">
-      <div class="skill-item"><img src="images/git.webp" alt="Git"><span>Git</span></div>
-      <div class="skill-item"><img src="images/figma.webp" alt="Figma"><span>Figma</span></div>
-    </div>
+<div class="contact-section" id="contact-section">
+  <div class="contact-content">
+    <h2>Contact me</h2>
+    <p>If you have an application you are interested in developing, a feature that you need built, or a project that needs coding, I'd love to help with it!</p>
+    <form class="contact-form">
+      <div class="form-group">
+        <input type="text" id="name" name="name" placeholder="Your Name">
+      </div>
+      <div class="form-group">
+        <input type="email" id="email" name="email" placeholder="Your Email">
+      </div>
+      <div class="form-group">
+        <textarea id="message" name="message" placeholder="Write your message here..."></textarea>
+      </div>
+      <button type="submit" class="submit-button">Get in touch</button>
+    </form>
   </div>
 </div>
-</div>    
- <div class="contact-section" id="contact-section">
-    <div class="contact-content">
-          <h2>Contact me</h2>
-          <p>If you have an application you are interested in developing, a feature that you need built, or a project that needs coding, I'd love to help with it!</p>
-      <form class="contact-form">
-         <div class="form-group">
-            <input type="text" id="name" name="name" placeholder="Your Name">
-         </div>
-         <div class="form-group">
-             <input type="email" id="email" name="email" placeholder="Your Email">
-         </div>
-         <div class="form-group">
-             <textarea id="message" name="message" placeholder="Write your message here..."></textarea>
-         </div>
-             <button type="submit" class="submit-button">Get in touch</button>
-       </form>
-     </div>
-  </div>      
+    
 
   <script src="script.js" defer></script>                
   </body>
