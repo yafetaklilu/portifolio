@@ -22,7 +22,7 @@ body {
     padding-right: 20px;
     height: 80vh;
     border-bottom-left-radius: 40px; /* Rounded bottom-left corner */
-    background-image: url('images/your-background.jpg'); /* change to your image path */
+    background-image: url('images/hero bg.jpg'); /* change to your image path */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
